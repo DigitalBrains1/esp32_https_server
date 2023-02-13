@@ -304,6 +304,7 @@ void HTTPConnection::readLine(int lengthLimit) {
           return;
         }
       }
+      return;
     } else {
       _parserLine.text += newChar;
       _bufferProcessed += 1;
@@ -393,7 +394,7 @@ void HTTPConnection::loop() {
       break;
     case STATE_REQUEST_FINISHED: // Read headers
 
-      while (_bufferProcessed < _bufferUnusedIdx && !isClosed()) {
+      while (_bufferProcessed + 1 < _bufferUnusedIdx && !isClosed()) {
         readLine(HTTPS_REQUEST_MAX_HEADER_LENGTH);
         if (_parserLine.parsingFinished && _connectionState != STATE_ERROR) {
 
