@@ -1,5 +1,10 @@
 #include "WebsocketHandler.hpp"
 
+#ifdef TAG
+#undef TAG
+#endif
+static const char * const TAG = "WebsocketHandler";
+
 namespace httpsserver {
 
 /**
