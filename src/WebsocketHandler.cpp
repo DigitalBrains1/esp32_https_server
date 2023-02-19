@@ -1,11 +1,11 @@
 #include "WebsocketHandler.hpp"
 
+namespace httpsserver {
+
 #ifdef TAG
 #undef TAG
 #endif
 static const char * const TAG = "WebsocketHandler";
-
-namespace httpsserver {
 
 /**
  * @brief Dump the content of the WebSocket frame for debugging.
