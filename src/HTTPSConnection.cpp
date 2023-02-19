@@ -2,6 +2,10 @@
 
 namespace httpsserver {
 
+#ifdef TAG
+#undef TAG
+#endif
+static const char * const TAG = "HTTPSConnection";
 
 HTTPSConnection::HTTPSConnection(ResourceResolver * resResolver):
   HTTPConnection(resResolver) {

@@ -5,6 +5,11 @@ const size_t MAXLINESIZE = 256;
 
 namespace httpsserver {
 
+#ifdef TAG
+#undef TAG
+#endif
+static const char * const TAG = "HTTPMultipartBodyParser";
+
 HTTPMultipartBodyParser::HTTPMultipartBodyParser(HTTPRequest * req):
   HTTPBodyParser(req),
   peekBuffer(NULL),

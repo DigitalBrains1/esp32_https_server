@@ -5,6 +5,11 @@
 
 namespace httpsserver {
 
+#ifdef TAG
+#undef TAG
+#endif
+static const char * const TAG = "HTTPResponse";
+
 HTTPResponse::HTTPResponse(ConnectionContext * con):
   _con(con) {
 

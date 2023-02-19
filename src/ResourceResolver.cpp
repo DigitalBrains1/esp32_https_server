@@ -2,6 +2,11 @@
 
 namespace httpsserver {
 
+#ifdef TAG
+#undef TAG
+#endif
+static const char * const TAG = "ResourceResolver";
+
 ResourceResolver::ResourceResolver() {
   _nodes = new std::vector<HTTPNode *>();
   _defaultNode = NULL;

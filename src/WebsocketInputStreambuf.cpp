@@ -1,6 +1,12 @@
 #include "WebsocketInputStreambuf.hpp"
 
 namespace httpsserver {
+
+#ifdef TAG
+#undef TAG
+#endif
+static const char * const TAG = "WebsocketInputStreambuf";
+
 /**
  * @brief Create a Web Socket input record streambuf
  * @param [in] socket The socket we will be reading from.

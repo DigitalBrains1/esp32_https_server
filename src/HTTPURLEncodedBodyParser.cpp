@@ -5,6 +5,11 @@
 
 namespace httpsserver {
 
+#ifdef TAG
+#undef TAG
+#endif
+static const char * const TAG = "HTTPURLEncodedBodyParser";
+
 HTTPURLEncodedBodyParser::HTTPURLEncodedBodyParser(HTTPRequest * req):
   HTTPBodyParser(req),
   bodyBuffer(NULL),

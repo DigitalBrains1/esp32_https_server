@@ -250,10 +250,7 @@ The server provides some internal logging, which is activated on level `INFO` by
 
 Logging output can also be controlled by using compiler flags. This requires an advanced development environment like explained in [Saving Space by Reducing Functionality](#saving-space-by-reducing-functionality).
 
-There are two parameters that can be configured:
-
-- `HTTPS_LOGLEVEL` defines the log level to use
-- `HTTPS_LOGTIMESTAMP` adds a timestamp (based on uptime) to each log entry
+The parameter `HTTPS_LOGLEVEL` defines the log level to use; the default is 3.
 
 | Value of `HTTPS_LOGLEVEL` | Error | Warning | Info | Debug |
 | ------------------------- | ----- | ------- | ---- | ----- |
@@ -265,7 +262,7 @@ There are two parameters that can be configured:
 
 **Example: Configuration with PlatformIO**
 
-To set these flags in PlatformIO, you can modify your `platformio.ini`. The following entries set the minimum log level to warning and enable timestamps
+To set this flag in PlatformIO, you can modify your `platformio.ini`. The following entry sets the minimum log level to warning
 
 ```ini
 [env:wroom]
@@ -275,5 +272,4 @@ framework = arduino
 lib_deps = esp32_https_server
 build_flags =
   -DHTTPS_LOGLEVEL=2
-  -DHTTPS_LOGTIMESTAMP
 ```
