@@ -10,7 +10,7 @@ namespace httpsserver {
 
 /**
  * \brief **Utility function**: Parse an unsigned integer from a string
- * 
+ *
  * The second parameter can be used to define the maximum value that is acceptable
  */
 uint32_t parseUInt(std::string const &s, uint32_t max = 0xffffffff);

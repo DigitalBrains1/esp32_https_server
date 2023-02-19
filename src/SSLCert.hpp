@@ -34,21 +34,21 @@ namespace httpsserver {
 
 /**
   * \brief Certificate and private key that can be passed to the HTTPSServer.
-  * 
+  *
   * **Converting PEM to DER Files**
-  * 
+  *
   * Certificate:
   * ```bash
   * openssl x509 -inform PEM -outform DER -in myCert.crt -out cert.der
   * ```
-  * 
+  *
   * Private Key:
   * ```bash
   * openssl rsa -inform PEM -outform DER -in myCert.key -out key.der
   * ```
-  * 
+  *
   * **Converting DER File to C Header**
-  * 
+  *
   * ```bash
   * echo "#ifndef KEY_H_" > ./key.h
   * echo "#define KEY_H_" >> ./key.h
@@ -60,13 +60,13 @@ class SSLCert {
 public:
   /**
    * \brief Creates a new SSLCert.
-   * 
+   *
    * The certificate and key data may be NULL (default values) if the certificate is meant
    * to be passed to createSelfSignedCert().
-   * 
+   *
    * Otherwise, the data must reside in a memory location that is not deleted until the server
    * using the certificate is stopped.
-   * 
+   *
    * \param[in] certData The certificate data to use (DER format)
    * \param[in] certLength The length of the certificate data
    * \param[in] pkData The private key data to use (DER format)
@@ -102,12 +102,12 @@ public:
 
   /**
    * \brief Sets the private key in DER format
-   * 
+   *
    * The data has to reside in a place in memory that is not deleted as long as the
    * server is running.
-   * 
+   *
    * See SSLCert() for some information on how to generate DER data.
-   * 
+   *
    * \param[in] _pkData The data of the private key
    * \param[in] length The length of the private key
    */
@@ -115,12 +115,12 @@ public:
 
   /**
    * \brief Sets the certificate data in DER format
-   * 
+   *
    * The data has to reside in a place in memory that is not deleted as long as the
    * server is running.
-   * 
+   *
    * See SSLCert for some information on how to generate DER data.
-   * 
+   *
    * \param[in] _certData The data of the certificate
    * \param[in] length The length of the certificate
    */
@@ -143,7 +143,7 @@ private:
 
 /**
  * \brief Defines the key size for key generation
- * 
+ *
  * Not available if the `HTTPS_DISABLE_SELFSIGNING` compiler flag is set
  */
 enum SSLKeySize {
@@ -157,20 +157,20 @@ enum SSLKeySize {
 
 /**
  * \brief Creates a self-signed certificate on the ESP32
- * 
+ *
  * This function creates a new self-signed certificate for the given hostname on the heap.
  * Make sure to clear() it before you delete it.
- * 
+ *
  * The distinguished name (dn) parameter has to follow the x509 specifications. An example
  * would be:
  *   CN=myesp.local,O=acme,C=US
- * 
+ *
  * The strings validFrom and validUntil have to be formatted like this:
  * "20190101000000", "20300101000000"
- * 
+ *
  * This will take some time, so you should probably write the certificate data to non-volatile
  * storage when you are done.
- * 
+ *
  * Setting the `HTTPS_DISABLE_SELFSIGNING` compiler flag will remove this function from the library
  */
 int createSelfSignedCert(SSLCert &certCtx, SSLKeySize keySize, std::string dn, std::string validFrom = "20190101000000", std::string validUntil = "20300101000000");

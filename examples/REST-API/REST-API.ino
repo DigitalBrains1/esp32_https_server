@@ -2,12 +2,12 @@
  * Example for the ESP32 HTTP(S) Webserver
  *
  * IMPORTANT NOTE:
- * This example is a bit more complex than the other ones, so be careful to 
+ * This example is a bit more complex than the other ones, so be careful to
  * follow all steps.
- * 
+ *
  * Make sure to check out the more basic examples like Static-Page to understand
  * the fundamental principles of the API before proceeding with this sketch.
- * 
+ *
  * To run this script, you need to
  *  1) Enter your WiFi SSID and PSK below this comment
  *  2) Install the SPIFFS File uploader into your Arduino IDE to be able to
@@ -221,7 +221,7 @@ SSLCert * getCertificate() {
   File keyFile = SPIFFS.open("/key.der");
   File certFile = SPIFFS.open("/cert.der");
 
-  // If now, create them 
+  // If now, create them
   if (!keyFile || !certFile || keyFile.size()==0 || certFile.size()==0) {
     Serial.println("No certificate found in SPIFFS, generating a new one for you.");
     Serial.println("If you face a Guru Meditation, give the script another try (or two...).");
@@ -268,7 +268,7 @@ SSLCert * getCertificate() {
       return NULL;
     }
 
-	} else {
+  } else {
     Serial.println("Reading certificate from SPIFFS.");
 
     // The files exist, so we can create a certificate based on them
@@ -299,11 +299,11 @@ SSLCert * getCertificate() {
 
 /**
  * This handler function will try to load the requested resource from SPIFFS's /public folder.
- * 
+ *
  * If the method is not GET, it will throw 405, if the file is not found, it will throw 404.
  */
 void handleSPIFFS(HTTPRequest * req, HTTPResponse * res) {
-	
+
   // We only handle GET here
   if (req->getMethod() == "GET") {
     // Redirect / to /index.html
@@ -439,7 +439,7 @@ void handlePostEvent(HTTPRequest * req, HTTPResponse * res) {
   if (!reqObj.is<long>("time") || !reqObj.is<int>("gpio") || !reqObj.is<int>("state")) {
     dataValid = false;
   }
-	
+
   // Check actual values
   unsigned long eTime = 0;
   int eGpio = 0;

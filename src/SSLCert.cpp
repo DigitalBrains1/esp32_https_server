@@ -55,9 +55,9 @@ void SSLCert::clear() {
 
 /**
  * Function to create the key for a self-signed certificate.
- * 
+ *
  * Writes private key as DER in certCtx
- * 
+ *
  * Based on programs/pkey/gen_key.c
  */
 static int gen_key(SSLCert &certCtx, SSLKeySize keySize) {
@@ -88,7 +88,7 @@ static int gen_key(SSLCert &certCtx, SSLKeySize keySize) {
     return HTTPS_SERVER_ERROR_KEYGEN_SETUP_PK;
   }
 
-  // Actual key generation 
+  // Actual key generation
   int resPkGen = mbedtls_rsa_gen_key(
     mbedtls_pk_rsa( key ),
     mbedtls_ctr_drbg_random,
@@ -146,7 +146,7 @@ static int gen_key(SSLCert &certCtx, SSLKeySize keySize) {
 
 /**
  * Function to generate the X509 certificate data for a private key
- * 
+ *
  * Writes certificate in certCtx
  *
  * Based on programs/x509/cert_write.c

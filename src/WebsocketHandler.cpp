@@ -83,7 +83,7 @@ int WebsocketHandler::read() {
   WebsocketFrame frame;
   int length = _con->readBuffer((uint8_t*)&frame, sizeof(frame));
   HTTPS_LOGD("Websocket: Read %d bytes", length);
-  if(length == 0) 
+  if(length == 0)
     return 0;
   else if (length != sizeof(frame)) {
     HTTPS_LOGE("Websocket read error");

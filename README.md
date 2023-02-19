@@ -149,18 +149,18 @@ Every _route_ (or path) that should be accessible on the server has to be config
 
 ```C++
 void handleRoot(HTTPRequest * req, HTTPResponse * res) {
-	// We want to deliver an HTML page, so we set the content type
-	res->setHeader("Content-Type", "text/html");
-	// The response implements the Print interface, so you can use it just like
-	// you would write to Serial etc.
-	res->println("<!DOCTYPE html>");
-	res->println("<html>");
-	res->println("<head><title>Hello World!</title></head>");
-	res->println("<body>");
-	res->println("<h1>Hello World!</h1>");
-	res->print("<p>... from your ESP32!</p>");
-	res->println("</body>");
-	res->println("</html>");
+    // We want to deliver an HTML page, so we set the content type
+    res->setHeader("Content-Type", "text/html");
+    // The response implements the Print interface, so you can use it just like
+    // you would write to Serial etc.
+    res->println("<!DOCTYPE html>");
+    res->println("<html>");
+    res->println("<head><title>Hello World!</title></head>");
+    res->println("<body>");
+    res->println("<h1>Hello World!</h1>");
+    res->print("<p>... from your ESP32!</p>");
+    res->println("</body>");
+    res->println("</html>");
 }
 ```
 

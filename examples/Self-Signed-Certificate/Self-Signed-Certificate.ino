@@ -9,7 +9,7 @@
  * functionalities:
  *  - Show simple page on web server root
  *  - 404 for everything else
- * 
+ *
  * In contrast to the other examples, the certificate and the private key will be
  * generated on the ESP32, so you do not need to provide them here.
  * (this means no need to run create_cert.sh)

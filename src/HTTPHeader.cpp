@@ -9,7 +9,7 @@ namespace httpsserver {
 HTTPHeader::HTTPHeader(const std::string &name, const std::string &value):
   _name(normalizeHeaderName(name)),
   _value(value) {
-    
+
 }
 
 HTTPHeader::~HTTPHeader() {

@@ -11,7 +11,7 @@ rm -f exampleca.* example.* cert.h private_key.h
 openssl genrsa -out exampleca.key 1024
 
 # create certificate
-cat > exampleca.conf << EOF  
+cat > exampleca.conf << EOF
 [ req ]
 distinguished_name     = req_distinguished_name
 prompt                 = no
@@ -32,7 +32,7 @@ echo "01" > exampleca.srl
 # create a private key
 openssl genrsa -out example.key 1024
 # create certificate signing request
-cat > example.conf << EOF  
+cat > example.conf << EOF
 [ req ]
 distinguished_name     = req_distinguished_name
 prompt                 = no

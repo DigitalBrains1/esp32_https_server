@@ -10,7 +10,7 @@ ResourceNode::ResourceNode(const std::string &path, const std::string &method, c
 }
 
 ResourceNode::~ResourceNode() {
-  
+
 }
 
 } /* namespace httpsserver */

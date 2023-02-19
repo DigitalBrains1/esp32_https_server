@@ -130,7 +130,7 @@ void setup() {
   //
   // If any of the functions returns false, the URL is considered to be invalid completely.
   // In this case, the server will return with a static 400 Bad Request response.
-  // 
+  //
   // For convenience, the ValidatorFunctions.hpp include file already provides some useful
   // and common checks (integer, non-empty, ...). Have a look at it before you start
   // implementing your own checks to save time!
@@ -242,7 +242,7 @@ void handleSwitch(HTTPRequest * req, HTTPResponse * res) {
   // Redirect the user to the main page
   res->setStatusCode(303);
   // This should make the browser do a GET /
-  res->setStatusText("See Other"); 
+  res->setStatusText("See Other");
   res->setHeader("Location", "/");
   res->println("Redirecting...");
 }

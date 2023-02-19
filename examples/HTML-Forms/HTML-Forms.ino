@@ -314,7 +314,7 @@ void handleFormEdit(HTTPRequest * req, HTTPResponse * res) {
       // is submitted
       res->printf("<input name=\"filename\" type=\"hidden\" value=\"%s\">", filename.c_str());
       res->print("<textarea name=\"content\" rows=\"24\" cols=\"80\">");
-      
+
       // Read the file from SPIFFS and write it to the HTTP response body
       size_t length = 0;
       do {
@@ -350,7 +350,7 @@ void handleFormEdit(HTTPRequest * req, HTTPResponse * res) {
     // temporary variables.
     std::string filename;
     bool savedFile = false;
-    
+
     // Iterate over the fields from the request body by calling nextField(). This function
     // will update the field name and value of the body parsers. If the last field has been
     // reached, it will return false and the while loop stops.

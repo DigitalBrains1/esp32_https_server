@@ -18,12 +18,12 @@ class ResourceResolver;
 
 /**
  * @brief The ResourceParameters provide access to the parameters passed in the URI.
- * 
+ *
  * There are two types of parameters: Path parameters and query parameters.
- * 
+ *
  * Path parameters are the values that fill the asterisk placeholders in the route
  * definition of a ResourceNode.
- * 
+ *
  * Query parameters are the key-value pairs after a question mark which can be added
  * to each request, either by specifying them manually or as result of submitting an
  * HTML form with a GET as method property.

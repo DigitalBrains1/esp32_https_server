@@ -123,7 +123,7 @@ void HTTPServer::loop() {
       }
     }
   }
- 
+
   // Step 2: Check for new connections
   // This makes only sense if there is space to store the connection
   if (freeConnectionIdx > -1) {
@@ -199,7 +199,7 @@ uint8_t HTTPServer::setupSocket() {
     _socket = -1;
     return 0;
   }
- 
+
 }
 
 void HTTPServer::teardownSocket() {

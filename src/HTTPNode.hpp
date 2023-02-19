@@ -19,7 +19,7 @@ enum HTTPNodeType {
 
 /**
  * \brief Base class for a URL/route-handler in the server.
- * 
+ *
  * Use ResourceNode for requests that access dynamic or static resources or HttpNode for routes that
  * create Websockets.
  */
@@ -55,7 +55,7 @@ public:
    * Adds a validation function that checks if the actual value of a parameter matches the expectation
    * @param paramIdx defines the ID of the parameter that should be checked (starts by 0)
    * @param validator the function (string -> bool) that checks if the parameter matches the expecatation
-   * 
+   *
    * @see ValidatorFunctions.hpp if you need some predefined templates for functions
    */
   void addPathParamValidator(size_t paramIdx, const HTTPValidationFunction * validator);

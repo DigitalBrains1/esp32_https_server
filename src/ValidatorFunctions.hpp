@@ -12,7 +12,7 @@
 
 /**
  * This file contains some validator functions that can be used to validate URL parameters.
- * 
+ *
  * They covor common cases like checking for integer, non-empty, ..., so the user of this library
  * does not need to write them on his own.
  */
@@ -26,7 +26,7 @@ namespace httpsserver {
 
   /**
    * \brief **Built-in validator function**: Checks that a value is a positive int
-   * 
+   *
    * Checks that the value is a positive integer (combine it with newValidateUnsignedIntegerMax if
    * you have constraints regarding the size of that number)
    */

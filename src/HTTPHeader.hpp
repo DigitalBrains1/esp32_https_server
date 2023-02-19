@@ -20,7 +20,7 @@ public:
 
 /**
  * \brief Normalizes case in header names
- * 
+ *
  * It converts the first letter and every letter after a non-alnum character
  * to uppercase. For example, "content-length" becomes "Content-Length" and
  * "HOST" becomes "Host".

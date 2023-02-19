@@ -36,7 +36,7 @@ private:
   // Static configuration. Port, keys, etc. ====================
   // Certificate that should be used (includes private key)
   SSLCert * _cert;
- 
+
   //// Runtime data ============================================
   SSL_CTX * _sslctx;
   // Status of the server: Are we running, or not?

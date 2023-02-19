@@ -47,7 +47,7 @@ public:
   void finalize();
 
   ConnectionContext * _con;
-  
+
 private:
   void printHeader();
   void printInternal(const std::string &str, bool skipBuffer = false);

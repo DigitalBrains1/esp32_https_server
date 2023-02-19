@@ -16,7 +16,7 @@ HTTPMultipartBodyParser::HTTPMultipartBodyParser(HTTPRequest * req):
   fieldFilename("")
 {
   auto contentType = _request->getHeader("Content-Type");
-#ifdef DEBUG_MULTIPART_PARSER      
+#ifdef DEBUG_MULTIPART_PARSER
   Serial.print("Content type: ");
   Serial.println(contentType.c_str());
 #endif

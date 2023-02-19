@@ -7,7 +7,7 @@ ConnectionContext::ConnectionContext() {
 }
 
 ConnectionContext::~ConnectionContext() {
-	
+
 }
 
 void ConnectionContext::setWebsocketHandler(WebsocketHandler *wsHandler) {

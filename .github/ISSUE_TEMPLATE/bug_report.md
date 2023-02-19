@@ -22,9 +22,9 @@ A description of what actually happened.
 
 **ESP32 Module**
 Please provide specifications of your module
-- RAM/PSRAM: 
-- Flash Size: 
-- Other special properties: 
+- RAM/PSRAM:
+- Flash Size:
+- Other special properties:
 
 **Software (please complete the following information if applicable)**
  - IDE and Version: [e.g. Arduino 1.8.7, Sloeber 4.3, PlatformIO 3.6.2]

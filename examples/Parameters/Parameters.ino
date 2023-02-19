@@ -116,11 +116,11 @@ void setup() {
 }
 
 void loop() {
-	// This call will let the server do its work
-	secureServer.loop();
+  // This call will let the server do its work
+  secureServer.loop();
 
-	// Other code would go here...
-	delay(1);
+  // Other code would go here...
+  delay(1);
 }
 
 void handleRoot(HTTPRequest * req, HTTPResponse * res) {
@@ -176,7 +176,7 @@ void handleRoot(HTTPRequest * req, HTTPResponse * res) {
       if (paramVal == "blue" || paramVal == "magenta" || paramVal == "cyan" || paramVal == "rainbow") {
         b = 128 + random(0, 128);
       }
-		}
+    }
 
     // Print the random color. As the HTTPResponse extends the Print interface, we can make use of that.
     res->print(r, HEX);
@@ -273,16 +273,16 @@ void handleQueryDemo(HTTPRequest * req, HTTPResponse * res) {
   res->println("</head>");
   res->println("<body>");
   res->println("<p>The following query paramters have been set:</p>");
-  
+
   // Start a table to display the parameters
   res->println("<table style=\"border:1px solid black collapse;\">");
   res->println("<tr><th>Key</th><th>Value</th></tr>");
-  // Iterate over the parameters. For more information, read about the C++ standard template library, 
+  // Iterate over the parameters. For more information, read about the C++ standard template library,
   // especially about vectors and iterators.
   ResourceParameters *params = req->getParams();
   for(auto it = params->beginQueryParameters(); it != params->endQueryParameters(); ++it) {
     res->print("<tr><td>");
-    
+
     // The iterator yields std::pairs of std::strings. The first value contains the parameter key
     res->printStd((*it).first);
     res->print("</td><td>");

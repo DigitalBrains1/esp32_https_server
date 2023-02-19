@@ -83,7 +83,7 @@ bool HTTPURLEncodedBodyParser::nextField() {
     return false;
   }
   fieldName = std::string(bodyPtr, equalPtr-bodyPtr);
-  
+
   char *valuePtr = equalPtr + 1;
   char *endPtr = index(valuePtr, '&');
   if (endPtr == NULL) {

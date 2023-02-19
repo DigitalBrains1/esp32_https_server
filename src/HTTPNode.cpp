@@ -19,7 +19,7 @@ namespace httpsserver {
       }
     };
   }
-  
+
   HTTPNode::~HTTPNode() {
     // Delete validator references
     for(std::vector<HTTPValidator*>::iterator validator = _validators.begin(); validator != _validators.end(); ++validator) {
